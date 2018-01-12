@@ -1,7 +1,7 @@
-# Format Proposal for 2018
+# Code Club Outline and Contract 
 ### Connor Pettitt - 27-11-2017
 
-**Abstract**: A format proposal for the second academic session for Code Club Beginners and Improvers. I hope for this proposal to give rise to a document that can be handed to the kids and their parents so they know what we expect of them, and what they should expect to do at Code Club. It should give us a bit of leverage to get the kids to behave better. It could be considered a trial run for next year. Feel free to add your own points and sections. If any of the points below seem too abstract or adult oriented, you can edit the document in github to try to frame the point differently, or add a comment at the end of the line (no changes will be lost, the document can always be reverted).
+**Abstract**: A "Contract" proposal for the second academic session for Code Club Beginners and Improvers. I hope for this proposal to give rise to a document that can be handed to the kids and their parents so they know what we expect of them, and what they should expect to do at Code Club. It should give us a bit of leverage to get the kids to behave better. It could be considered a trial run for next year. Feel free to add your own points and sections. If any of the points below seem too abstract or adult oriented, you can edit the document in github to try to frame the point differently, or add a comment at the end of the line (no changes will be lost, the document can always be reverted).
 
 ## Beginners Outline
 
