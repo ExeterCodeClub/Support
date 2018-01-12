@@ -8,6 +8,6 @@ Add todos or potentially workable ideas in the list below, and try to create a d
 
 ## Ideas and Proposals
 - How to do a project (general) presentation/lesson segment for improvers
-- Time lapse camera project outline for improvers
-- [contract](https://github.com/ExeterCodeClub/Support/blob/master/codeclubcontract.md) Code Club "Contract", Summary, Expectations document for parents and kids
+- [outline](https://github.com/ExeterCodeClub/Support/blob/master/timelapse.md) - Time lapse camera project outline for improvers
+- [contract](https://github.com/ExeterCodeClub/Support/blob/master/codeclubcontract.md) - Code Club "Contract", Summary, Expectations document for parents and kids
 - Fund restructuring proposal (how to get parents to supply some of their kids' materials etc)
