@@ -57,7 +57,7 @@
 - Maybe you are afraid of making a mistake and being seen as 'dumb'
 - Maybe you don't understand the problem well enough to solve it
 
-## The Programmer mindset
+## The programmer mindset
 - Don't be afraid of doing the obvious first, a better method may come later
 - Plan your code ahead of time (or read through the problem sheet once before beginning)
 - Learn to break problem tasks down into easy steps
