@@ -34,7 +34,8 @@
 6. Parent statement to explain summary of Code Club outline.
 
 
-# Outline Document Draft (the bullet points are to be expanded into sentences that will give useful information to the kids as well as their parents)
+# Outline Document Draft 
+**(the bullet points are to be expanded into sentences that will give useful information to the kids as well as their parents)**
 
 ## What you can expect at code club
 - Learn the basics of programming through completing challenges
