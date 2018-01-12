@@ -3,7 +3,7 @@
 ### Connor Pettitt
 #### 27-11-2017
 
-**Abstract**: An format proposal for the second academic session for Code Club Beginners and Improvers.
+**Abstract**: An format proposal for the second academic session for Code Club Beginners and Improvers. Feel free to add your own points and sections. If any of the points below seem too abstract or adult oriented, you can edit the document in github to try to frame the point differently, or add a comment at the end of the line (no changes will be lost, the document can always be reverted).
 
 ## Beginners Outline
 
