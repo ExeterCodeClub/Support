@@ -2,6 +2,11 @@
 ### Connor Pettitt - 2018-01-11
 **Abstract**: This document aims to outline the basic tasks to follow in order to complete the improvers' timelapse camera project. I believe that we need to provide more structure in order to increase the productivity of each session (and reduce the chaos just a little). We should still aim to allow room for imagination and spontaneity within the design of the project. We will need to figure an effective way to balance the project between everyone.
 
+### TODO
+- create a set of pictures for Team 3 to test with
+- create help sheets with pointers on them for each team
+- 
+
 ## Team Categories 
 **(which tasks could be considered overarching and separately achievable?)**
 
@@ -17,6 +22,9 @@ This task will be almost pure programming to make the picam work, will involve s
 - the ability take pictures on command 
 - to save and output files with useful names
 - ...
+### Items
+- rpi
+- picam module
 
 ## Task 2 - Program logic 
 This task is about writing the brain behind the system, and should allow a degree of imagination in writing the code. 
@@ -25,6 +33,10 @@ This task is about writing the brain behind the system, and should allow a degre
 - (optional) only work when motion is detected
 - (optional) change the exposure settings for interesting effects (play with long exposure + time lapse + leds?)
 - ...
+### Items
+- rpi
+- sensor modules
+- a set of testing images
 
 ## Task 3 - Video replay system
 This task will involve building an interface that displays image history to the user in a presentable form. This one might be considered quite difficult.
@@ -34,6 +46,9 @@ This task will involve building an interface that displays image history to the 
 - output a video file
 - automatically push file to github for them to see at home (this would be a one liner using os/sys system call library - though not sure of exact details)
 - ...
+### Items
+- rpi
+- a set of testing images
 
 ## Task 4 - Case design and creation
 This task will involve producing a case for the whole system, so we can mount it all somewhere convenient in the library. i've included it so perhaps non-coders could join in. 
@@ -43,3 +58,12 @@ This task will involve producing a case for the whole system, so we can mount it
 - (opt) 3d printer design
 - (opt) hand made
 - ...
+### Items
+- cad software
+- drawing stationery
+- 3mm acrylic sheet
+- 3mm mdf sheet
+- polystyrene
+- craft knife
+- glue
+- stuff from fablab ..
