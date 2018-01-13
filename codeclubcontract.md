@@ -38,21 +38,22 @@
 **(the bullet points are to be expanded into sentences that will give useful information to the kids as well as their parents)**
 
 ## What you can expect at code club
-- Learn the basics of programming through completing challenges
-- Types of challenge
-- How many challenges we have for you to complete
-- Code club online material 
-- Working speed and not completing a challenge
-
+- Learn the basics of programming through completing fun challenges
+- *Types of challenge*
+- *How many challenges we have for them to complete*
+- *Reassurance about working speed and not completing a challenge*
+- Inspire them to 'cheat' and get ahead by looking at the [online material](https://github.com/ExeterCodeClub/Worksheets) 
 
 ## What we expect from you at code club
-- To learn by getting things right or wrong
-- To have fun without disrupting others
-- To share your personal additions towards the end if time
-- To put in the effort to complete the challenges, or ask for help
+- To learn by doing, whether you get it right or wrong
+- To have fun *without* disrupting others
+- To share your personal additions with others who complete the challenge
+- Simon's (Code of Conduct)[https://docs.google.com/document/d/1N07gd9HJMRLSLMG--IsvKt9pNs4WorsvqDZArR7AsbQ/edit]
 
+# Some tips they might find helpful, and maybe inspire a bit of confidence
+I'm not sure how to present these.
 
-## If coding seems too hard for you, that can be changed
+## If coding seems too hard for you
 - Maybe you are not breaking down the problem far enough
 - Maybe you are afraid of making a mistake and being seen as 'dumb'
 - Maybe you don't understand the problem well enough to solve it
@@ -67,13 +68,6 @@
 - You have permission to be curious and learn anything
 - Don't be afraid to write 'bad' code, just write however you like
     what matters is that it works.
-- If you want to know more about programming, ask look for what others have done
+- If you want to know more about programming, look at what others have done
 - Try searching the web, things like "how to become a programmer", quora will have good answers
 - The internet has almost unlimited free resources to learn from
-
-
-
-
-
-
-
