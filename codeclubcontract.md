@@ -48,7 +48,7 @@
 - To learn by doing, whether you get it right or wrong
 - To have fun *without* disrupting others
 - To share your personal additions with others who complete the challenge
-- Simon's (Code of Conduct)[https://docs.google.com/document/d/1N07gd9HJMRLSLMG--IsvKt9pNs4WorsvqDZArR7AsbQ/edit]
+- Simon's [Code of Conduct](https://docs.google.com/document/d/1N07gd9HJMRLSLMG--IsvKt9pNs4WorsvqDZArR7AsbQ/edit)
 
 # Some tips they might find helpful, and maybe inspire a bit of confidence
 I'm not sure how to present these.
