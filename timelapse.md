@@ -7,6 +7,9 @@
 - create help sheets with pointers on them for each team
 - 
 
+### Links
+- [project inspiration](https://www.raspberrypi.org/forums/viewtopic.php?t=72435)
+
 ## Team Categories 
 **(which tasks could be considered overarching and separately achievable?)**
 
@@ -25,6 +28,7 @@ This task will be almost pure programming to make the picam work, will involve s
 ### Items
 - rpi
 - picam module
+- OR usb webcam, since some pis i tested had difficulty detecting the picam i own
 
 ## Task 2 - Program logic 
 This task is about writing the brain behind the system, and should allow a degree of imagination in writing the code. 
@@ -42,22 +46,31 @@ This task is about writing the brain behind the system, and should allow a degre
 This task will involve building an interface that displays image history to the user in a presentable form. This one might be considered quite difficult.
 ### Aims
 - read the image directory and sequentially display images
+  - python library to display an image to the screen, 
+  - use library to control the resulting gui (matplotlib has such functions)
+  - case of adding image1, waiting, deleting image1, adding image 2 ... to act as a 'video' feed
 - ability to set the time frame which should be displayed (read file names and pick those in range ti < datetime < tf)
+  - break down the filename into a date format
+  - check if date > or < ti and tf, python library will help with this
 - output a video file
-- automatically push file to github for them to see at home (this would be a one liner using os/sys system call library - though not sure of exact details)
-- ...
+  - [rpi images -> video solution](https://unix.stackexchange.com/questions/98602/convert-images-into-avi-with-raspberry-pi#98607)
+  - e.g. os.sys('ffmpeg image%.jpg')
+- automatically push file to github for them to see at home 
+  - this would be a one liner using os.system('git push') after setting up a github connection  
 ### Items
 - rpi
 - a set of testing images
+### Prerequisites
+- install a video encoding library for the pi to use
 
 ## Task 4 - Case design and creation
 This task will involve producing a case for the whole system, so we can mount it all somewhere convenient in the library. i've included it so perhaps non-coders could join in. 
 ### Aims
-- Design a case using some cad software or something else
+- Design a case 
+  - use of supplied cad software on pi maybe
 - (opt) laser cutter design
 - (opt) 3d printer design
 - (opt) hand made
-- ...
 ### Items
 - cad software
 - drawing stationery
