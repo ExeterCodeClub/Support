@@ -76,7 +76,7 @@ Otherwise, you will need to create a script that can be controlled by the pi its
 
 Open up a python IDE (any python testing environment) such as Thonny, or IDLE, and find the text editor.
 
-Type the following into the editor (this is not a terminal, just enter the text) then save it to somewhere easy to find, like `Documents` or `Desktop`. Call your file camerapic.py
+Type the following into the editor (this is not a terminal, just enter the text) then save it to somewhere easy to find, like `Documents` or `Desktop`. Call your file findsettings.py
 
 ```python
 import picamera
@@ -172,7 +172,7 @@ One of the print statements has the line `f'loop {i}'` inside it, this is python
 Have a guess at what will happen when if you run the above code. Try opening another python file in your IDE, putting it into the text editor, then running it.
 
 
-Modify camerapic.py to contain a for loop which will change a particular setting, while leaving the rest alone, use the following as an example
+Modify findsettings.py to contain a for loop which will change a particular setting, while leaving the rest alone, use the following as an example
 
 ```python
 
@@ -225,11 +225,41 @@ Settings and their ranges (min,max) you might want to play with include
  - saturation (0,find out!)
  - ISO        (0,800)
 
+once you have found the settings you would like to use, save then continue to the next step.
 
 
 
 ### Step 6
 
 Now you have the absolute basic functionality for the script, it is time to start adding the ability for another script to control yours. this is what Task2 with the program logic tries to take advantage of.
+
+Save your file with a new name camerapic.py, such that it has all the same contents, you will be modifying it to interface (or interact with) another python script.
+
+This step requires the use of a function, which takes the form
+
+```python
+def funcname(argument1,argument2):
+    print('I will now add the two arguments together')
+
+    added = argument1 + argument2
+    print(f'This is the result: {added}')
+
+    return
+
+print('calling functions')
+funcname(1,2)
+funcname('hello ','world')
+```
+
+A function is a block of code much like any other code you've written so far, except that you need to define it before you can use it. They are helpful because they can be reused as many times as needed without having to rewrite the entire block out again, with different inputs (or 'arguments', but not the kind you have with your parents).
+
+In the above block, three things are happening. 
+
+First is the function definition, which starts with the line `def funcname(argument1,argument2):` and ends with `return`, all functions need to start with `def <insert function name>(<insert arguments>):`, but they don't have to end with `return`, find out what it does when you get the chance. All functions need to have an indented code block of at least one line inside them (like `for` loops).
+
+Try copying the above code into a new file, then run that file. 
+
+Notice that 'calling functions' is the first output. This is because a function definition doesn't do anything on its own, the funciton must be 'called', which is what happens in the lines below. `print` is an example of a function, which does nothing on its own, while `print(argument)` is a function call, that will do something with the input. So the python notation to call a function is to add `()` to the end of the function name, with the required arguments inside the brackets.
+
 
 
