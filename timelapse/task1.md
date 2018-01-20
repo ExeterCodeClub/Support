@@ -253,8 +253,6 @@ funcname('hello ','world')
 
 A function is a block of code much like any other code you've written so far, except that you need to define it before you can use it. They are helpful because they can be reused as many times as needed without having to rewrite the entire block out again, with different inputs (or 'arguments', but not the kind you have with your parents).
 
-In the above block, three things are happening. 
-
 First is the function definition, which starts with the line `def funcname(argument1,argument2):` and ends with `return`, all functions need to start with `def <insert function name>(<insert arguments>):`, but they don't have to end with `return`, find out what it does when you get the chance. All functions need to have an indented code block of at least one line inside them (like `for` loops).
 
 Try copying the above code into a new file, then run that file. 
