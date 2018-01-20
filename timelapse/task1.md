@@ -144,30 +144,23 @@ This will require a for loop, which takes the form
 ```python
 ilist=[1,2,3,4]
 for i in ilist:
-    print('loop')
+    print(f'loop {i}')
     print(i)
     print()
 ```
 
+In python you can 'loop over' lists, which look like `[1,2,3,4,5]` or `['asfda','ashrg','abcd']` or `[1,2,'three','four']`, you can have numbers and strings in a list, and they can be as long as you like. 
 
-In python you can loop over lists, which look like `[1,2,3,4,5]` or `['asfda','ashrg','abcd']` or `[1,2,'three','four']`, you can have numbers and strings in a list. 
+In the snippet above, `i` and `ilist` are variables, which you choose the names of. The second variable needs to be a list, whether one that has already been created like above, or simply a list expression like this `for i in [1,2,3,4]:`.
 
-In the snippet above, `i` and `ilist` are variables which you choose the names of. The second variable has to already exist beforehand, since we need to 'loop over' it, the first variable gets its value changed to each item individually inside the list starting at the first item, it will only exist while you are in the loop.
+The first variable (`i`) is newly created, and gets its value changed to each successive item in the list (`ilist`) with every loop, starting at the first item.
+
+One of the print statements has the line `f'loop {i}'` inside it, this is python for "insert variable `i` into this string". Note that the string must start with an f, otherwise it will literally print `'loop {i}'` instead of `'loop 2'` (if `i=2`).
+
+Have a guess at what will happen when if you run the above code. Try opening another python file in your IDE, putting it into the text editor, then running it.
 
 
-
-```python
-i=0
-for item in itemlist:
-    #something you want to do for every item in itemlist
-    #for example
-    print(f"Item name: {item}")
-    print("This sentence will be printed on every loop")
-    i+=1
-    print(i)
-```
-
-Try opening another python file in your IDE, and putting the above into the text editor.
+### Step 6
 
 Now you have the absolute basic functionality for the script, it is time to start adding the ability for another script to control yours. this is what Task2 with the program logic is all about. 
 
