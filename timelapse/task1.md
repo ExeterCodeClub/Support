@@ -69,7 +69,7 @@ After you have fiddled with it a bit, try running that command again to check th
 
 
 ### Step 3
-This is great, you can now take pictures with the camera by hand and if you would like to sit in the library for the next three weeks typing `raspistill -o image1.jpg...` into the terminal every ten seconds, then the project is complete!
+This is great, you can now take pictures with the camera by hand. If you would like to sit in the library for the next three weeks typing `raspistill -o image1.jpg...` into the terminal every ten seconds, then the project is complete!
 
 Otherwise, you will need to create a script that can be controlled by the pi itself automatically.
 
