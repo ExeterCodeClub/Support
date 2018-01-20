@@ -199,6 +199,7 @@ for settingValue in arange(min,max,step):
     camera.brightness=settingValue
 
     camera.capture(f'altered{setting}{settingValue}.jpg')
+    print(f'picture taken with setting value: {settingValue}')
     sleep(0.5)
 ```
 
@@ -206,7 +207,8 @@ The arange function creates a list with its first number as `min`, and with each
 
 Can you see what will happen with this loop? 
 
-Look through the output images to see which one looks the best, note down which setting value it was on, then replace the setting in the loop with another from the list that you want to investigate. e.g. move `camera.brightness=70` up to the settings list, put `camera.ISO=settingValue` into the loop, and change the variable `setting` to iso with `setting='iso'`.
+Look through the output images to see which one looks the best, note down which setting value it was on, then replace the setting in the loop with another from the list that you want to investigate. 
+e.g. move `camera.brightness=70` up to the settings list, put `camera.ISO=settingValue` into the loop, change the variable `setting` to iso with `setting='iso'`, and change the variables `min`,`max`,`step` to the appropriate values (try `0`,`800`,`100`).
 
 ### Step 6
 
