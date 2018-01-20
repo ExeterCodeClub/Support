@@ -17,6 +17,7 @@ Some things you might now be asking:
  - You can move to the documents directory by typing `cd documents`, notice the prompt changes, you can move back up one step by typing `cd ..`. Moving around is a case of using `cd dirname`, where `..` is always the name of the directory above yours, and then using `ls` to see what is inside your new dir. 
  - There are better faster ways to move around, but this is the easiest to learn in five minutes.
 
+
 ### Step 1
 First you'll need to get the raspberry pi detecting the picam.
 
@@ -81,15 +82,21 @@ Type the following into the editor (this is not a terminal, just enter the text)
 import picamera
 camera = picamera.PiCamera()
 camera.capture('pythonimage.jpg')
+camera.close()
 ```
 
 The first line imports the module which allows you to easily control the picamera. 
+
 The second line creates a camera 'instance' which is a virtual representation of the real picamera on the pi, so if you run one of the allowed commands on this instance, the actual camera should behave accordingly.
-The third line is a command that tells the camera to take a picture (much like we were doing by hand!).
+
+The third line is a command that tells the camera to take a picture (much like we were doing by hand!). 
+
+The fourth line ensures that the virtual camera is deleted, and frees up the link to the picamera.
 
 Run the script by finding the run button somewhere in the IDE and pressing it. Usually `ctrl s` to save, then `F5` works as well. 
 
 If it runs without errors, check that there is a file called pythonimage.jpg in your chosen directory (e.g. `Documents` or `Desktop`).
+
 
 
 ### Step 4
@@ -209,6 +216,17 @@ Can you see what will happen with this loop?
 
 Look through the output images to see which one looks the best, note down which setting value it was on, then replace the setting in the loop with another from the list that you want to investigate. 
 e.g. move `camera.brightness=70` up to the settings list, put `camera.ISO=settingValue` into the loop, change the variable `setting` to iso with `setting='iso'`, and change the variables `min`,`max`,`step` to the appropriate values (try `0`,`800`,`100`).
+
+Settings and their ranges (min,max) you might want to play with include 
+ - brightness (0,100)
+ - rotation   (0,360)
+ - sharpness  (0,find out!) < probably (0,100)
+ - contrast   (0,find out!)
+ - saturation (0,find out!)
+ - ISO        (0,800)
+
+
+
 
 ### Step 6
 

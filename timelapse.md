@@ -19,19 +19,20 @@
 4. design case to store rpi inside
 
 ## Task 1 - PiCam setup scripts with file handling procedure
-This task will be almost pure programming to make the picam work, will involve searching for code snippets online. 
+This task will be almost pure programming to make the picam work.
+### [Tutorial](https://github.com/ExeterCodeClub/Support/blob/master/timelapse/task1.md)
+
 ### Aims
 - to write the set up script to apply correct settings (exposure time, iso, etc), and make changeable via external code (api). 
 - the ability take pictures on command 
 - to save and output files with useful names
-- ...
 ### Items
 - rpi
 - picam module
 - OR usb webcam, since some pis i tested had difficulty detecting the picam i own
 
 ## Task 2 - Program logic 
-This task is about writing the brain behind the system, and should allow a degree of imagination in writing the code. 
+This task is about writing the brain behind the system.
 ### Aims
 - trigger the picam to take images every n seconds
 - (optional) only work when motion is detected
@@ -43,7 +44,7 @@ This task is about writing the brain behind the system, and should allow a degre
 - a set of testing images
 
 ## Task 3 - Video replay system
-This task will involve building an interface that displays image history to the user in a presentable form. This one might be considered quite difficult.
+This task will involve building an interface that displays image history to the user in a presentable form.
 ### Aims
 - read the image directory and sequentially display images
   - python library to display an image to the screen, 
@@ -64,7 +65,7 @@ This task will involve building an interface that displays image history to the 
 - install a video encoding library for the pi to use
 
 ## Task 4 - Case design and creation
-This task will involve producing a case for the whole system, so we can mount it all somewhere convenient in the library. i've included it so perhaps non-coders could join in. 
+This task will involve producing a case for the whole system, so we can mount it all somewhere convenient in the library.
 ### Aims
 - Design a case 
   - use of supplied cad software on pi maybe
