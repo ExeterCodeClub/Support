@@ -73,11 +73,9 @@ This is great, you can now take pictures with the camera by hand. If you would l
 
 Otherwise, you will need to create a script that can be controlled by the pi itself automatically.
 
-Navigate to somewhere easy to find, such as `Documents` or `Desktop` (remember `cd dir`, ask for help if you need more explanation)
-
 Open up a python IDE (any python testing environment) such as Thonny, or IDLE, and find the text editor.
 
-Type the following into the editor (this is not a terminal, just enter the text)
+Type the following into the editor (this is not a terminal, just enter the text) then save it to somewhere easy to find, like `Documents` or `Desktop`
 
 ```python
 import picamera
