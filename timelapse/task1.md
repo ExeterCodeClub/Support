@@ -7,7 +7,7 @@ setting up the picamera.**
 ### Links:
 This [website](https://www.raspberrypi.org/documentation/usage/camera/python/README.md) shows you how to set up and use the picamera
 
-### Note: When asked to type in a command, it means that the command should be typed into a terminal, which can be brought up using the key combination `ctrl shift t`, all held down (briefly) together, don't press it a million times. For example, "Use the command `ls`", means locate your current terminal (or open a new one if you need to), type in the command at the prompt (it usually looks like `pi ~ $` or `username directory $`, or in windows powershell it might be `C:/ >`) giving you `pi ~ $ ls`, then press the return/enter key. In this case you should see the contents of the current directory listed (`~` means your user's home directory, which is the same as /home/pi/, and `$` is linux for "you are issuing commands as a regular user account").
+**Note:** When asked to type in a command, it means that the command should be typed into a terminal, which can be brought up using the key combination `ctrl shift t`, all held down (briefly) together, don't press it a million times. For example, "Use the command `ls`", means locate your current terminal (or open a new one if you need to), type in the command at the prompt (it usually looks like `pi ~ $` or `username directory $`, or in windows powershell it might be `C:/ >`) giving you `pi ~ $ ls`, then press the return/enter key. In this case you should see the contents of the current directory listed (`~` means your user's home directory, which is the same as /home/pi/, and `$` is linux for "you are issuing commands as a regular user account").
 
 ### Step 1
 First you'll need to get the raspberry pi detecting the picam.
