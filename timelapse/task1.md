@@ -175,7 +175,6 @@ Have a guess at what will happen when if you run the above code. Try opening ano
 Modify findsettings.py to contain a for loop which will change a particular setting, while leaving the rest alone, use the following as an example
 
 ```python
-
 import picamera
 from numpy import arange        #<<< this is new
 camera = picamera.PiCamera()
@@ -260,4 +259,41 @@ Try copying the above code into a new file, then run that file.
 Notice that 'calling functions' is the first output. This is because a function definition doesn't do anything on its own, the function must be 'called', which is what the script does in the lines below `print('calling functions')`. By now you are familiar with the `print` function, try typing just `print` into a python terminal, it tells you that it is a function definition! However `print(argument)` is an example of a function 'call', and calls do something with the argument they're given. So the python notation to call a function is to add `()` to the end of the function definition, with the required arguments inside the brackets.
 
 
+Modify camerapic.py to look like the following (while using the settings you've found to work best)
 
+```python
+import picamera
+camera = picamera.PiCamera()
+
+def init(cam):
+    cam.resolution = (1280, 720)
+    cam.hflip = False
+    cam.vflip = False
+    cam.rotation = 0
+    cam.crop = (0.0, 0.0, 1.0, 1.0)
+    cam.sharpness = 0
+    cam.contrast = 0
+    cam.brightness = 50 #take a guess what this does
+    cam.saturation = 0 #adds more colour
+    cam.ISO = 0 #changes the sensitivity of the camera, high iso is good for low light
+    cam.brightness=50
+    
+    print('Camera initialised.')
+
+def takePic(cam,num):
+    cam.capture(f'image{num}.jpg')
+
+if __name__ == 'main':
+    init(camera)
+    takePic(camera, 1)
+```
+
+As you can see, this script has two functions inside it. 
+
+The first function takes one argument `cam`, and changes its settings. It is expecting `cam` to be a virtual camera object, so if you called `init('cows')` for example, it would crash.
+
+The second function accepts two arguments `cam` and `num`, then uses `cam` to take a picture and output a file with `num` in the name. As you might expect, `cam` is treated as a camera object, while `num` can be either a string or a number.
+
+Now run the script. It should output a file with the name image1.jpg.
+
+The script is now ready, and this part of the project is finished.
