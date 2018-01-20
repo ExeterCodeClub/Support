@@ -292,8 +292,10 @@ As you can see, this script has two functions inside it.
 
 The first function takes one argument `cam`, and changes its settings. It is expecting `cam` to be a virtual camera object, so if you called `init('cows')` for example, it would crash.
 
-The second function accepts two arguments `cam` and `num`, then uses `cam` to take a picture and output a file with `num` in the name. As you might expect, `cam` is treated as a camera object, while `num` can be either a string or a number.
+The second function accepts two arguments `cam` and `num`, then uses `cam` to take a picture and output a file with `num` in the name. As you might expect, `cam` is treated as a camera object, while `num` can be either a string or a number.j
 
 Now run the script. It should output a file with the name image1.jpg.
+
+Notice the line that says `if __name__=='main':`, that is python for "if this script is being run directly by hand, do the stuff in the indented block below. Otherwise, don't do anything."
 
 The script is now ready, and this part of the project is finished.
