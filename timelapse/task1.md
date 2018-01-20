@@ -41,6 +41,7 @@ Ensure that:
 2. the ribbon is in the slot labelled 'camera', not 'display', between the ethernet port and the hdmi port.
 3. the ribbon is inserted fully into the slot. Notice that you can pull up the little black bit on top, this unlocks the slot. 
 
+
 Try running the command 
 
 ```bash
