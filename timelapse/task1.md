@@ -259,7 +259,7 @@ First is the function definition, which starts with the line `def funcname(argum
 
 Try copying the above code into a new file, then run that file. 
 
-Notice that 'calling functions' is the first output. This is because a function definition doesn't do anything on its own, the funciton must be 'called', which is what happens in the lines below `print('calling functions')`. By now you are familiar with the `print` function definition, and they do nothing on their own (try typing `print` into a python terminal). However `print(argument)` is an example of a function call, and they do something with the input. So the python notation to call a function is to add `()` to the end of the function name, with the required arguments inside the brackets.
+Notice that 'calling functions' is the first output. This is because a function definition doesn't do anything on its own, the function must be 'called', which is what happens in the lines below `print('calling functions')`. By now you are familiar with the `print` function definition, and they do nothing on their own (try typing `print` into a python terminal). However `print(argument)` is an example of a function call, and they do something with the input. So the python notation to call a function is to add `()` to the end of the function definition, with the required arguments inside the brackets.
 
 
 
