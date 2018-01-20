@@ -149,7 +149,7 @@ Run the script to check that there are no errors, then see the output files.
 ### Step 5
 Once you've put the settings into your script, you can try to automate the process of finding your perfect image.
 
-This will require a for loop, which takes the form
+This step will require a for loop, and for loops take the form
 
 ```python
 ilist=[1,2,3,4]
@@ -235,7 +235,7 @@ Now you have the absolute basic functionality for the script, it is time to star
 
 Save your file with a new name camerapic.py, such that it has all the same contents, you will be modifying it to interface (or interact with) another python script.
 
-This step requires the use of a function, which takes the form
+This step requires the use of a function, and functions take the form
 
 ```python
 def funcname(argument1,argument2):
@@ -259,7 +259,7 @@ First is the function definition, which starts with the line `def funcname(argum
 
 Try copying the above code into a new file, then run that file. 
 
-Notice that 'calling functions' is the first output. This is because a function definition doesn't do anything on its own, the funciton must be 'called', which is what happens in the lines below. `print` is an example of a function, which does nothing on its own, while `print(argument)` is a function call, that will do something with the input. So the python notation to call a function is to add `()` to the end of the function name, with the required arguments inside the brackets.
+Notice that 'calling functions' is the first output. This is because a function definition doesn't do anything on its own, the funciton must be 'called', which is what happens in the lines below `print('calling functions')`. By now you are familiar with the `print` function definition, and they do nothing on their own (try typing `print` into a python terminal). However `print(argument)` is an example of a function call, and they do something with the input. So the python notation to call a function is to add `()` to the end of the function name, with the required arguments inside the brackets.
 
 
 
