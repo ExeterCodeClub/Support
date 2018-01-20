@@ -50,7 +50,7 @@ raspistill -o image.jpg
 
 Now type `ls` to see if there is a file called image.jpg, if it exists then the camera is working. 
 
-Find the name of your pi's web browser by looking in the programs menu (top left), and use it to open the image file with the following command (replacing <browser> with e.g. chromium, or firefox)
+Find the name of your pi's web browser by looking in the programs menu (top left), and use it to open the image file with the following command (replacing `<browsername>` with e.g. chromium, or firefox)
 
 ```bash
 <browsername> image.jpg
