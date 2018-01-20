@@ -12,8 +12,10 @@ Some things you might now be asking:
  - a **prompt** is a string of characters which tells you where you can type in your next command, it 'prompts' you to type there. 
  - the prompt normally contains a small amount of information for the user, and usually looks like `pi ~ $` or more generally `username currentdirectory $`. In windows powershell it might be `C:/ >`. When you type in a comand e.g `ls`, you should see `pi ~ $ ls`. No need to type the prompt in yourself!
  - If there are lots of prompts, the bottom-most one is the correct one.
- - If the screen is really messy with output, try pressing enter a bunch of times at the prompt to make some space. shift-up can scroll up.
+ - If the screen is really messy with output, try pressing enter a bunch of times at the prompt to make some space. `shift up` can scroll up.
  - `~` means your user's home directory, which is the same as /home/pi/, the documents directory inside your home folder will show as `~/documents/` 
+ - You can move to the documents directory by typing `cd documents`, notice the prompt changes, you can move back up one step by typing `cd ..`. Moving around is a case of using `cd dirname`, where `..` is always the name of the directory above yours, and then using `ls` to see what is inside your new dir. 
+ - There are better faster ways to move around, but this is the easiest to learn in five minutes.
 
 ### Step 1
 First you'll need to get the raspberry pi detecting the picam.
@@ -35,9 +37,10 @@ Once you've done this, quit the menu and type the command `reboot` (make sure yo
 Now install the picamera into the camera slot (be gentle!)
 
 Ensure that:
-    1. the ribbon cable is installed with the blue tab facing the ethernet port
-    2. the ribbon is in the slot labelled 'camera', not 'display', between the ethernet port and the hdmi port.
-    3. the ribbon is inserted fully into the slot. Notice that you can pull up the little black bit on top, this unlocks the slot. 
+1. the ribbon cable is installed with the blue tab facing the ethernet port
+2. the ribbon is in the slot labelled 'camera', not 'display', between the ethernet port and the hdmi port.
+3. the ribbon is inserted fully into the slot. Notice that you can pull up the little black bit on top, this unlocks the slot. 
+
 Try running the command 
 
 ```bash
