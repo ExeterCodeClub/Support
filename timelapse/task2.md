@@ -1,6 +1,5 @@
 # Task 2 Resources
-**This document contains some of the resources you'll need to get started with writing the program logic**
-
+**This document contains the resources you'll need to get started with writing the program logic**
 
 **Aim:** Your goal is to write a control script which will set the time between timelapse frames, and set the filenames in a useful fashion. You will make the raspberry pi run this script when it is turned on.
 
