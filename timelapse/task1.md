@@ -1,6 +1,5 @@
 # Task 1 Resources
-**This document contains some of the resources you'll need to get started with
-setting up the picamera.**
+**This document the resources you'll need to get started with setting up the picamera.**
 
 **Aim:** Your goal is to make sure that the pi can be used to take good pictures. There are a number of settings that can be applied to make the camera work in different ways. Once you have got the camera working, you can experiment with your own ideas and play with the camera.
 
