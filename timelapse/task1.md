@@ -48,7 +48,7 @@ Try running the command
 raspistill -o image.jpg
 ```
 
-Now type `ls` to see if there is a file called image.jpg, if it exists then the camera is working. 
+Now type `ls` to see if there is a file called image.jpg, if it exists then the camera is working, otherwise skip this step.
 
 Find the name of your pi's web browser by looking in the programs menu (top left), and use it to open the image file with the following command (replacing `<browsername>` with e.g. chromium, or firefox)
 
@@ -57,7 +57,7 @@ Find the name of your pi's web browser by looking in the programs menu (top left
 ```
 
 
-If it doesn't exist, then try running the command
+If the file `image.jpg` doesn't exist, then try running the command
 
 ```bash
 vcgencmd get_camera
@@ -66,4 +66,110 @@ vcgencmd get_camera
 Find where it says supported=x and detected=y. x and y will be either 1 or 0, we want them both to be 1. Make sure you check how the ribbon cable is inserted, looking at the checklist above. 
 
 After you have fiddled with it a bit, try running that command again to check the status.
+
+
+### Step 3
+This is great, you can now take pictures with the camera by hand and if you would like to sit in the library for the next three weeks typing `raspistill -o image1.jpg...` into the terminal every ten seconds, then the project is complete!
+
+Otherwise, you will need to create a script that can be controlled by the pi itself automatically.
+
+Navigate to somewhere easy to find, such as `Documents` or `Desktop` (remember `cd dir`, ask for help if you need more explanation)
+
+Open up a python IDE (any python testing environment) such as Thonny, or IDLE, and find the text editor.
+
+Type the following into the editor (this is not a terminal, just enter the text)
+
+```python
+import picamera
+camera = picamera.PiCamera()
+camera.capture('pythonimage.jpg')
+```
+
+The first line imports the module which allows you to easily control the picamera. 
+The second line creates a camera 'instance' which is a virtual representation of the real picamera on the pi, so if you run one of the allowed commands on this instance, the actual camera should behave accordingly.
+The third line is a command that tells the camera to take a picture (much like we were doing by hand!).
+
+Run the script by finding the run button somewhere in the IDE and pressing it. Usually `ctrl s` to save, then `F5` works as well. 
+
+If it runs without errors, check that there is a file called pythonimage.jpg in your chosen directory (e.g. `Documents` or `Desktop`).
+
+
+### Step 4
+Change the script to look like this (you'll see why in a minute)
+```python
+import picamera
+camera = picamera.PiCamera()
+camera.capture('original.jpg')
+
+#settings go below here 
+
+
+#settings go above here 
+
+camera.capture('altered.jpg')
+```
+
+Lines beginning with `# ... ` are comments, they do nothing but tell the person  who is reading the script something they should know, it's a little note, a warning, a love letter.
+
+The following is a list of camera settings which will alter the way that the images look
+
+```python
+#flip the image horizontally or vertically
+camera.hflip = True
+camera.vflip = True
+camera.rotation = 0
+
+#cut the edges of the image off
+camera.crop = (0.0, 0.0, 1.0, 1.0)
+
+#change how sharp lines are in the image
+camera.sharpness = 0
+
+#change the difference between the darkest and the lightest pixels (low contrast means light and dark colours become kind of grey instead, high contrast means that dark things look really black, and light things look really white)
+camera.contrast = 0
+
+#change how bright the image looks
+camera.brightness = 50 #take a guess what this does
+camera.saturation = 0 #adds more colour
+camera.ISO = 0 #changes the sensitivity of the camera, high iso is good for low light
+```
+
+Try inserting those settings into your script and seeing how they alter the original image when you change the values. Some values might be limited to a certain range like 0-1, or 0-100 (no need to copy the comments out). If you think a particular setting might as well be left alone, 'comment it out' by adding a `#` to the start of the line.
+
+Run the script to check that there are no errors, then see the output files.
+
+### Step 5
+Once you've put the settings into your script, you can try to automate the process of finding your perfect image.
+
+This will require a for loop, which takes the form
+
+```python
+ilist=[1,2,3,4]
+for i in ilist:
+    print('loop')
+    print(i)
+    print()
+```
+
+
+In python you can loop over lists, which look like `[1,2,3,4,5]` or `['asfda','ashrg','abcd']` or `[1,2,'three','four']`, you can have numbers and strings in a list. 
+
+In the snippet above, `i` and `ilist` are variables which you choose the names of. The second variable has to already exist beforehand, since we need to 'loop over' it, the first variable gets its value changed to each item individually inside the list starting at the first item, it will only exist while you are in the loop.
+
+
+
+```python
+i=0
+for item in itemlist:
+    #something you want to do for every item in itemlist
+    #for example
+    print(f"Item name: {item}")
+    print("This sentence will be printed on every loop")
+    i+=1
+    print(i)
+```
+
+Try opening another python file in your IDE, and putting the above into the text editor.
+
+Now you have the absolute basic functionality for the script, it is time to start adding the ability for another script to control yours. this is what Task2 with the program logic is all about. 
 
