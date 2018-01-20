@@ -199,7 +199,7 @@ for settingValue in arange(min,max,step):
     camera.brightness=settingValue
 
     camera.capture(f'altered{setting}{settingValue}.jpg')
-    print(f'picture taken with setting value: {settingValue}')
+    print(f'picture taken with {setting} setting value: {settingValue}')
     sleep(0.5)
 ```
 
