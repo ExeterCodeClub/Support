@@ -113,7 +113,7 @@ camera.capture('original.jpg')
 camera.capture('altered.jpg')
 ```
 
-Lines beginning with `# ... ` are comments, they do nothing but tell the person  who is reading the script something they should know, it's a little note, a warning, a love letter.
+Lines beginning with `# ... ` are comments, they do nothing but tell the person  who is reading the script something they should know, it can be a little note, a warning, a smiley face.
 
 The following is a list of camera settings which will alter the way that the images look
 
