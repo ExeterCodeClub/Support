@@ -1,0 +1,241 @@
+Physical computing presentation
+-speech
+--extra information
+-(question)
+#[presentation layout directive]
+## < new slide
+
+##[]
+hello everyone I'm Connor, I hope to tell you a little about programming
+
+
+
+
+
+
+
+##[]
+-(what is a computer, and what does a computer do?)
+-Simply speaking computers are devices that have inputs, memory, a processing unit, and outputs.
+--There is also some extra stuff, but that will only complicate things
+-examples: PC, smartphone, dumb calculator,..., music box with removable spindle, a self playing piano, people!
+#[show pc, smartphone on left, calculator, music box, self playing piano on right]
+--General purpose computers can perform any task you can describe if you give them the right peripherals - programmable
+--Special purpose computers only do a few tasks 
+---calculators are hardwired to add, subtract, multiply, divide. the music machines can only play music.
+-The raspberry pi is a general purpose computer just like your home computer, laptop, tablet.
+
+##[raspberry pi among other devices]
+-I told you that the raspberry pi was a computer just like your pcs and tablets.
+-They all have inputs and outputs
+-(Can you list some inputs or outputs? think about things on a computer that you can interact with in some way)
+--keyboard,mouse,display,audio,usb
+-The raspberry pi is interesting, in that it has the GPIO 
+#[point to the gpio on the raspberry pi]
+-(what does gpio mean?)
+-General purpose input/output, meaning that we can program the pi to send any signal we want through those pins
+--special purpose might be the audio or display output, even the power button.
+
+
+
+
+##[have a black box computer with four unlabled black boxes inside, obvious indicators for what each box represents are visible]
+#[inputs:hand dropping things in, processor:a little robot/brain, memory:"program" and "data", output:a person looking at it]
+-Think of each component of the computer as a set of black boxes that are connected with each other.
+#[have labels for each box floating around]
+-(What is this one?..) 
+#[point at input, output, processor, then memory]
+#[correctly label all boxes]
+-Let's break down the process of what happens inside the computer
+-You can place data into the input box
+-The memory box will keep hold of those data
+-The processing box will grab data, and a program from the memory box and carry out the program 
+-Finally when finished, the processing box moves the data to the output box ready for us to use
+--it may put the data back into the memory ready for another program
+
+
+
+
+
+
+
+
+
+
+
+##[]
+-here's an example
+#[set of holiday image_edits that are all upside down or backwards, two examples floating above, and then an obviously mixed set]
+-I have a set of holiday pictures that I want to edit but i'm too lazy, I'm a really bad photographer as well, so some have turned out backwards, and some upside down
+-(what would I tell my friends Simon and Corina to do with ones like this?)
+#[upside down picture] 
+-(and this?) 
+#[backwards writing picture]
+-since they are mixed together I need to tell them to decide between reversing and rotating
+-i would say "if upside down, rotate picture, else if backwards, reverse picture"
+-we can use this kind of thinking to begin to write a computer script
+-here, i have written some pseudo code
+#[Pseudo code
+
+get holiday_photos, as a list
+
+variable count = 1
+for each photo in holiday_photos:
+
+    if photo is upside_down:
+        rotate photo
+        save photo as "fixed_photo_{count}"
+    else if photo is backwards:
+        reverse photo
+        save photo as "fixed_photo_{count}"
+    else
+        save photo as "fixed_photo_{count}"
+
+    increase count by 1
+]
+
+-pseudo code is not a programming language, but it is a way for humans to plan out the scripts and logical thinking that computers like
+#[describe how the program works]
+
+#[Python like code
+import image_edit
+
+holiday_photos = [photo1, photo2, photo3, photo4, photo5]
+
+count = 1
+for photo in holiday_photos:
+
+    if image_edit.is_upside_down(photo) == True:
+        photo = image_edit.rotate(photo)
+        save_as_file(photo, "fixed_photo_" + count)
+    elif image_edit.is_backwards(photo) == True:
+        photo = image_edit.reverse(photo)
+        save_as_file(photo, "fixed_photo_" + count)
+    else
+        save_as_file(photo, "fixed_photo_" + count)
+
+    count = count + 1
+]
+-here is its python equivalent, notice how it looks very much like the pseudo code. This is why people love it.
+-I won't do into details over these instructions, but hopefully you can recognise how the pseudo code has translated over in places
+
+
+
+
+
+
+
+
+
+
+
+##[]
+-Writing instructions for a computer is called programming, you've been doing it already
+-Normally we write to a text file called a script which has each instruction on a new line.
+-Python is the language we are using to write the script, but there are many others. 
+#[display the names of other programming languages next to python]
+-The computer has a program which acts as a dictionary to convert python into computer language. 
+-(can anyone tell me the name of that program?)
+-Python IDLE!
+-other languages will have their own converters
+#[diagram showing all languages translated by dictionary into the same computer language]
+-Every script we write is trying to complete a task, like reverse a picture, or turn on a gpio pin 
+-A neat way to reuse that task is to make a function
+#[ photo_edit.py
+def fix_photos(photo_list):
+    
+    import images
+
+    count = 1
+    for photo in photo_list:
+    
+        if images.is_upside_down(photo) == True:
+            photo = images.rotate(photo)
+            save_as_file(photo, "fixed_photo_" + count)
+        elif images.is_backwards(photo) == True:
+            photo = images.reverse(photo)
+            save_as_file(photo, "fixed_photo_" + count)
+        else
+            save_as_file(photo, "fixed_photo_" + count)
+    
+        count = count + 1
+
+    return 
+]
+-so when i want to fix my photographs, i don't need to think about writing the script again, I do this instead
+#[
+holiday_photos = [photo1,photo2,photo3,photo4,photo5]
+
+
+import photo_edit
+photo_edit.fix_photos(holiday_photos)
+
+]
+-Lets go through a short python script you've been tasked with line by line
+#[
+
+from gpiozero import Button
+myButton1 = Button(21)
+
+while True:
+    myButton1.wait_for_press()
+    print("Pressed")
+    myButton1.wait_for_release()
+    print("Released")
+
+]
+#[line 1 highlighted]
+-line 1, we are importing an object called Button from a module called gpiozero.
+-gpiozero is just a python script with lots of functions and objects inside it, other people wrote these
+-objects act as a neat way to organise functions and variables
+-here is what the button object might look like inside
+
+#[ gpiozero.py
+
+#other objects will be defined in this same script
+...
+
+#Here is the button object
+class Button(pin_number)
+    def wait_for_press():
+        #some script that makes the script stop until the button is pressed
+
+        #Pseudo code
+        #wait for signal on pin {pin_number}
+        #when signal detected, continue
+
+        return
+
+    def wait_for_release():
+        #some script that makes the script stop until the button is released
+        ...
+        return
+
+    def another_function():
+        ...
+        return
+]
+
+#[line 2 highlighted]
+-line 2, might be confusing, but it is doing something simple
+-notice how Button takes an input called pin_number? 
+-the Button object does not know which pin the button is connected to, it leaves it open for us to decide
+-we can tell it by "instantiating", or assigning it to another name which we called myButton1 
+-the object myButton1 with lower case 'b' DOES know which pin the button is connected to
+-(which pin would this button be connected to?)
+
+#[line 3 highlighted]
+-line 3 says to keep looping forever, since it evaluates the statement here and decides whether it is true or not
+-line 4 uses python dot notation to reference a function stored inside our object, see here, this one waits for the button to be pressed
+-line 5 prints the word "pressed" to the console
+-line 6 references another function which waits for the button to be released
+-line 7 prints the word "released" to the console
+
+
+##[]
+-To recap, i've told you about what a computer is and how it works. 
+-i've told you how to write a simple program and introduced you to pseudocode
+-and i've explained some of the workings of a python script you have been tasked to write
+
+-Now you can get to work on your task sheets hopefully a little bit wiser!
+
