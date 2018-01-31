@@ -5,7 +5,7 @@
 
 **Links:** This [website](https://www.raspberrypi.org/documentation/usage/camera/python/README.md) shows you how to set up and use the picamera
 
-**Note:** When asked to type in a command, it means that the command should be typed into a terminal, which can be brought up using the key combination `ctrl shift t`, all held down briefly together. For example, "Use the command `ls`", means bring up a terminal new or old, type in the command at the **prompt**, then press the return/enter key. In this case you should see the contents of the current directory listed.
+**Note:** When asked to type in a command, it means that the command should be typed into a terminal, which can be brought up by pressing `ctrl shift t` briefly at the same time. For example, "Use the command `ls`", means bring up an old or new terminal, type in the command at the **prompt**, then press the return/enter key. In this case you should see the contents of the current directory listed.
 
 Some things you might now be asking:
  - a **prompt** is a string of characters which tells you where you can type in your next command, it 'prompts' you to type there. 
