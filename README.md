@@ -11,3 +11,4 @@ Add todos or potentially workable ideas in the list below, and try to create a d
 - [project](https://github.com/ExeterCodeClub/Support/blob/master/timelapse.md) - Time lapse camera project outline for improvers
 - [contract](https://github.com/ExeterCodeClub/Support/blob/master/codeclubcontract.md) - Code Club "Contract", Summary, Expectations document for parents and kids
 - Fund restructuring proposal (help from parents to supply some of their kids' materials which they can keep etc)
+- [code of conduct](https://docs.google.com/document/d/1N07gd9HJMRLSLMG--IsvKt9pNs4WorsvqDZArR7AsbQ/edit)
