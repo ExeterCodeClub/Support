@@ -7,11 +7,11 @@
 
 1. First session outline programming (simple) at Code Club.
   * What they can expect from the lessons.
-  * What is expected of them in and between the lessons.
+  * What is expected of them in the sessions.
   * Emphasise on the frame of mind they should have to learn how to code.
-2. Frame the topic of the lesson every time they start.
-3. Start lesson once 80% of pupils sat, and arrival time has passed.
-4. Late students will be caught up to speed when the lesson has started.
+2. Frame the topic of the session at the start.
+3. Start once 80% of pupils sat, and arrival time has passed.
+4. Late students will be caught up to speed when the session has started.
 5. Student statement to explain summary of Code Club outline.
 6. Parent statement to explain summary of the Code Club outline.
 
@@ -23,51 +23,30 @@
   * What is expected of them in and between the lessons.
   * Emphasise on the frame of mind they should have to learn how to code.
   * **Use of notebooks and reference material is highly encouraged!**
-2. Frame the topic of the lesson every time they start. 
+2. Frame the topic of the session every time they start. 
 3. **Time before or after lesson to discuss personal interests and projects.**
 4. **Projects at Code Club**:
   * Extended focus on a project (keeping notes, and limiting distraction)
-  * 'Permission' to write rubbish code.
+  * Permission to write 'rubbish' code.
   * Project planning and code planning - Project Outline/Pseudo.
   * List project deadlines - Christmas, March, Summer.
 5. Student statement to explain summary of Code Club outline.
 6. Parent statement to explain summary of Code Club outline.
 
-
-# Outline Document Draft 
-**(the bullet points are to be expanded into sentences that will give useful information to the kids as well as their parents)**
-
 ## What you can expect at code club
-- Learn the basics of programming through completing fun challenges
-- *Types of challenge*
-- *How many challenges we have for them to complete*
-- *Reassurance about working speed and not completing a challenge*
-- Inspire them to 'cheat' and get ahead by looking at the [online material](https://github.com/ExeterCodeClub/Worksheets) 
+- To learn the basics of programming through making games in scratch and programming projects in python
+- To share what you create with others
+- 
+- To get ahead by looking at the [online material](https://github.com/ExeterCodeClub/Worksheets) at https://github.com/ExeterCodeClub/Worksheets 
 
 ## What we expect from you at code club
 - To learn by doing, whether you get it right or wrong
 - To have fun *without* disrupting others
-- To share your personal additions with others who complete the challenge
 - Simon's [Code of Conduct](https://docs.google.com/document/d/1N07gd9HJMRLSLMG--IsvKt9pNs4WorsvqDZArR7AsbQ/edit)
 
-# Some tips they might find helpful, and maybe inspire a bit of confidence
-I'm not sure how to present these.
-
-## If coding seems too hard for you
-- Maybe you are not breaking down the problem far enough
-- Maybe you are afraid of making a mistake and being seen as 'dumb'
-- Maybe you don't understand the problem well enough to solve it
-
-## The programmer mindset
-- Don't be afraid of doing the obvious first, a better method may come later
-- Plan your code ahead of time (or read through the problem sheet once before beginning)
-- Learn to break problem tasks down into easy steps
-    - If the step is too hard break it down further
-    - If that step is too hard, ask someone else (teacher or search engine)
-- You will forget things, take notes in a small notebook to jog your memory
-- You have permission to be curious and learn anything
-- Don't be afraid to write 'bad' code, just write however you like
-    what matters is that it works.
-- If you want to know more about programming, look at what others have done
-- Try searching the web, things like "how to become a programmer", quora will have good answers
-- The internet has almost unlimited free resources to learn from
+## TIPS
+- Ask adults and friends who are good at coding to help you
+- Read through the task sheet once so that you understand it
+- Don't be afraid to get it wrong
+- If you want to know more about coding, look at what others have made
+- Try using google to nsearch things like "how to learn programming" and "how to become a programmer"
