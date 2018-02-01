@@ -19,8 +19,7 @@
 4. design case to store rpi inside
 
 ## Task 1 - PiCam setup scripts with file handling procedure
-This task is to make the picam work and take good pictures.
-### [Tutorial](https://github.com/ExeterCodeClub/Support/blob/master/timelapse/task1.md)
+This task is to make the picam work and take good pictures. tutorial found [here](https://github.com/ExeterCodeClub/Support/blob/master/timelapse/task1.md).
 
 ### Aims
 - to write the set up script to apply correct settings (exposure time, iso, etc), and make changeable via external code (api). 
@@ -32,7 +31,7 @@ This task is to make the picam work and take good pictures.
 - OR usb webcam, since some pis i tested had difficulty detecting the picam i own
 
 ## Task 2 - Program logic 
-This task is about writing the brain behind the system.
+This task is about writing the brain behind the system, tutorial found [here](https://github.com/ExeterCodeClub/Support/blob/master/timelapse/task2.md).
 ### Aims
 - trigger the picam to take images every n seconds
 - (optional) only work when motion is detected
@@ -44,7 +43,7 @@ This task is about writing the brain behind the system.
 - a set of testing images
 
 ## Task 3 - Video replay system
-This task is about turning the images into a video.
+This task is about turning the images into a video, tutorial found [here](https://github.com/ExeterCodeClub/Support/blob/master/timelapse/task3.md).
 ### Aims
 - read the image directory and sequentially display images
   - python library to display an image to the screen, 
@@ -65,7 +64,7 @@ This task is about turning the images into a video.
 - install a video encoding library for the pi to use
 
 ## Task 4 - Case design and creation
-This task is about making a nice looking case for the camera.
+This task is about making a nice looking case for the camera, tutorial found [here](https://github.com/ExeterCodeClub/Support/blob/master/timelapse/task4.md).
 ### Aims
 - Design a case 
   - use of supplied cad software on pi maybe
