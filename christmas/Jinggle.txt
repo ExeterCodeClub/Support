@@ -1,0 +1,47 @@
+# Welcome to Sonic Pi v2.11
+dq = 0.5225
+q = 0.35
+c = 0.7
+m = 1.4
+sq = 0.1725
+with_synth  :blade do
+  # bar one
+  play_pattern_timed [62,70,69,67,72,72,72,72],[q]
+  # bar 2
+  play_pattern_timed [74,72,70,67,65],[q,q,q,q,m]
+  # bar 3
+  play_pattern_timed [60,69,67,65,60,:r,60,60],[q,q,q,q,c,q,sq,sq]
+  # bar 4
+  play_pattern_timed [60,69,67,65,62],[q,q,q,q,m]
+  # bar 5
+  play_pattern_timed [62,70,69,67,64],[q,q,q,q,m]
+  # bar 6
+  play_pattern_timed [72,72,70,67,69],[q,q,q,q,m]
+  # bar 7
+  play_pattern_timed [60,64,67,65,60],[q,q,q,q,c]
+  # bar 8
+  play_pattern_timed [60,69,67,65,62,62],[q,q,q,q,dq,q]
+  # bar 9
+  play_pattern_timed [62,70,69,67,72,72,72,72],[q]
+  # bar 10
+  play_pattern_timed [74,72,70,67,65,72],[q,q,q,q,c,c]
+  # bar 11
+  play_pattern_timed [69,69,69,69,69,69],[q,q,c,q,q,c]
+  # bar 12
+  play_pattern_timed [69,72,65,67,69],[q,q,dq,sq,m]
+  # bar 13
+  play_pattern_timed [70,70,70,70,70,69,69,69,69],[q,q,dq,sq,q,q,q,sq,sq]
+  # bar 14
+  play_pattern_timed [69,67,67,69,67,72],[q,q,q,q,c,c]
+  # bar 15
+  play_pattern_timed [69,69,69,69,69,69],[q,q,c,q,q,c]
+  # bar 16
+  play_pattern_timed [69,72,65,67,69],[q,q,dq,sq,m]
+  # bar 17
+  play_pattern_timed [70,70,70,70,70,69,69,69,69],[q,q,dq,sq,q,q,q,sq,sq]
+  # bar 18
+  play_pattern_timed [69,67,67,69,67,72],[q,q,q,q,c,c]
+  # bar 19
+  play_pattern_timed [72,72,71,67,65],[q,q,q,q,m]
+  
+end

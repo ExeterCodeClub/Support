@@ -1,0 +1,41 @@
+# Welcome to Sonic Pi v2.11
+
+with_bpm 150 do
+  c = 1
+  m = 2
+  sb = 4
+  with_synth  :chiplead do
+    2.times do
+      # bar one
+      play_pattern_timed [67,67,67,69],[c]
+      # bar 2
+      play_pattern_timed [67,67,62,],[c,c,m]
+      # bar 3
+      play_pattern_timed [64,62,64,66],[c]
+      # bar 4
+      play_pattern_timed [67,67],[m]
+    end
+    # bar 5
+    play_pattern_timed [74,72,71,69],[c]
+    # bar 6
+    play_pattern_timed [71,69,67],[c,c,m]
+    # bar 7
+    play_pattern_timed [64,62,64,66],[c]
+    # bar 8
+    play_pattern_timed [67,67],[m]
+    # bar 9
+    play_pattern_timed [62,62,64,66],[c]
+    # bar 10
+    play_pattern_timed [67,67,69],[c,c,m]
+    # bar 11
+    play_pattern_timed [74,72,71,69],[c]
+    # bar 12
+    play_pattern_timed [67,72],[m]
+    # bar 13
+    play_pattern_timed [67],[sb]
+    # bar 14
+    
+    
+    
+  end# Welcome to Sonic Pi v2.11
+end
