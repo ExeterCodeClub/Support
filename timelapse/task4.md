@@ -5,9 +5,16 @@
 
 **Links:** 
 
-# draft 
+# Summary of aims
 
-### possible setup
+- make measurements
+- think about materials and tools
+- where will it go?
+
 - tripod mount
 - wall mount
 - bright design
+
+## More steps to come
+
+We need to figure out where we want to go with this part of the project!

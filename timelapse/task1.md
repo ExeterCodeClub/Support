@@ -69,7 +69,7 @@ After you have fiddled with it a bit, try running that command again to check th
 
 
 ### Step 3
-This is great, you can now take pictures with the camera by hand. If you would like to sit in the library for the next three weeks typing `raspistill -o image1.jpg...` every ten seconds, then the project is complete!
+You should now be able to take pictures with the camera by hand. If you would like to sit in the library for the next three weeks typing `raspistill -o image1.jpg...` every ten seconds, then the project is complete!
 
 Otherwise, you will need to create a script that can be controlled by the pi itself automatically.
 
@@ -148,7 +148,7 @@ Run the script to check that there are no errors, then see the output files.
 ### Step 5
 Once you've put the settings into your script, you can try to automate the process of finding your perfect image.
 
-This step will require a for loop, and for loops take the form
+This step will require a for loop, and for loops look like 
 
 ```python
 ilist=[1,2,3,4]
@@ -160,7 +160,7 @@ for i in ilist:
 
 In python you can 'loop over' lists, which look like `[1,2,3,4,5]` or `['asfda','ashrg','abcd']` or `[1,2,'three','four']`, you can have numbers and strings in a list, and they can be as long as you like. 
 
-A for loop runs a block of code once for each item in the list. The block of code must be indented, and by the same number of spaces.
+A for loop runs a block of code once for each item in the list. The block of code must be indented like in the example.
 
 In the snippet above, `i` and `ilist` are variables, which you choose the names of. The second variable needs to be a list, whether one that has already been created or a list expression like this `for i in [1,2,3,4]:`.
 
