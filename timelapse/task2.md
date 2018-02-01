@@ -30,4 +30,4 @@ for filename in camera.capture_continuous('img{counter:03d}.jpg'):
     sleep(300) # wait 5 minutes
 ```
 
-#draft
+# draft

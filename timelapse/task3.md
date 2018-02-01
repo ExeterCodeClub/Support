@@ -16,4 +16,4 @@ Some things you might now be asking:
  - You can move to the documents folder from your home folder by typing `cd documents`, notice the prompt changes, you can move back up one step by typing `cd ..`. Moving around is a case of using `cd foldername`, and then using `ls` to see what is inside your new folder. If you get lost, type `cd` to return home. 
  - There are faster ways to move around, but this is the quickest to learn. 
 
-#draft
+# draft
