@@ -5,9 +5,9 @@
 
 **Links:** 
 
-#draft 
+# draft 
 
-###possible setup
+### possible setup
 - tripod mount
 - wall mount
 - bright design
