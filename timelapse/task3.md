@@ -1,7 +1,7 @@
-# Task 2 Resources
-**This document contains the resources you'll need to get started with writing the program logic**
+# Task 3 Resources
+**This document contains the resources you'll need to get started with writing the video creator**
 
-**Aim:** Your goal is to write a control script which will set the time between timelapse frames, and name the files properly. You will make the raspberry pi run this script when it is turned on.
+**Aim:** Your goal is to write a program that can convert a set of images into video format, and then upload it to the internet automatically.
 
 **Links:** 
 
@@ -15,19 +15,5 @@ Some things you might now be asking:
  - `~` means your home folder, which is the same as /home/pi/
  - You can move to the documents folder from your home folder by typing `cd documents`, notice the prompt changes, you can move back up one step by typing `cd ..`. Moving around is a case of using `cd foldername`, and then using `ls` to see what is inside your new folder. If you get lost, type `cd` to return home. 
  - There are faster ways to move around, but this is the quickest to learn. 
-
-
-### a code snippet from the picamera documentation
-```python
-from time import sleep
-from picamera import PiCamera
-
-camera = PiCamera()
-camera.start_preview()
-sleep(2)
-for filename in camera.capture_continuous('img{counter:03d}.jpg'):
-    print('Captured %s' % filename)
-    sleep(300) # wait 5 minutes
-```
 
 #draft

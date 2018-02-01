@@ -5,16 +5,16 @@
 
 **Links:** This [website](https://www.raspberrypi.org/documentation/usage/camera/python/README.md) shows you how to set up and use the picamera
 
-**Note:** When asked to type in a command, it means that the command should be typed into a terminal, which can be brought up by pressing `ctrl shift t` briefly at the same time. For example, "Use the command `ls`", means bring up an old or new terminal, type in the command at the **prompt**, then press the return/enter key. In this case you should see the contents of the current directory listed.
+**Note:** When asked to type in a command, it means that the command should be typed into a terminal, which can be brought up by pressing `ctrl shift t` briefly at the same time. For example, "Use the command `ls`", means bring up an old or new terminal, type in the command at the **prompt**, then press the return/enter key. In this case you should see the contents of the current folder listed.
 
 Some things you might now be asking:
  - a **prompt** is a string of characters which tells you where you can type in your next command, it 'prompts' you to type there. 
- - the prompt normally contains a small amount of information for the user, and usually looks like `pi ~ $` or more generally `username currentdirectory $`. In windows powershell it might be `C:/ >`. When you type in a comand e.g `ls`, you should see `pi ~ $ ls`. No need to type the prompt in yourself!
+ - the prompt normally contains a small amount of information for you, and usually looks like `pi ~ $` which is telling you `username currentfolder $`. In windows powershell it is `C:/ >`. When you type in a comand e.g `ls`, you should see `pi ~ $ ls`. No need to type the prompt in yourself!
  - If there are lots of prompts, the bottom-most one is the correct one.
  - If the screen is really messy with output, try pressing enter a bunch of times at the prompt to make some space. `shift up` can scroll up.
- - `~` means your user's home directory, which is the same as /home/pi/, the documents directory inside your home folder will show as `~/documents/` 
- - You can move to the documents directory by typing `cd documents`, notice the prompt changes, you can move back up one step by typing `cd ..`. Moving around is a case of using `cd dirname`, where `..` is always the name of the directory above yours, and then using `ls` to see what is inside your new dir. 
- - There are better faster ways to move around, but this is the easiest to learn in five minutes.
+ - `~` means your home folder, which is the same as /home/pi/
+ - You can move to the documents folder from your home folder by typing `cd documents`, notice the prompt changes, you can move back up one step by typing `cd ..`. Moving around is a case of using `cd foldername`, and then using `ls` to see what is inside your new folder. If you get lost, type `cd` to return home. 
+ - There are faster ways to move around, but this is the quickest to learn. 
 
 
 ### Step 1
@@ -94,7 +94,7 @@ The fourth line ensures that the virtual camera is deleted, and frees up the lin
 
 Run the script by finding the run button somewhere in the IDE and pressing it. Usually `ctrl s` to save, then `F5` works as well. 
 
-If it runs without errors, check that there is a file called pythonimage.jpg in your chosen directory (e.g. `Documents` or `Desktop`).
+If it runs without errors, check that there is a file called pythonimage.jpg in your chosen folder (e.g. `Documents` or `Desktop`).
 
 
 
