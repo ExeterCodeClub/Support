@@ -17,3 +17,8 @@ Some things you might now be asking:
  - There are faster ways to move around, but this is the quickest to learn. 
 
 # draft
+- find location on system, `pwd`
+- find full path of images folder, `path='/home/pi/...'`
+- look inside images folder `ls /.../task3-img`
+- video capture https://stackoverflow.com/questions/29317262/opencv-video-saving-in-python#29317298, using python openCV2
+

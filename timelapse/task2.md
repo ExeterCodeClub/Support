@@ -31,3 +31,35 @@ for filename in camera.capture_continuous('img{counter:03d}.jpg'):
 ```
 
 # draft
+- control script to set time between frames
+- name the output files
+- call another script to take pictures 
+- save them in the right place
+- use motion detection to take pictures
+- alter raspberry pi settings to start script on boot
+
+def takePic(cam,num):
+    cam.capture(f'image{num}.jpg')
+
+### Step 1
+learn about while loops
+basics
+with print
+pause
+`i=1`
+finish point `while (i<100): i+=1`
+import time
+finish point `while (datetime < finishtime): ...`
+
+### Step 2
+test that we can save files in the right place with good names
+sensible naming scheme
+sensible save folder
+discover location, `pwd`
+output dummy files, `name=f'blah{i}', dummy=open(name,'w'): dummy.write('hello'), dummy.close()`
+
+### Step 3
+set the pi up to run the script on boot
+
+### Step 4
+wait for task1 to finish to insert code import task1, task1.takePic(name,num))
