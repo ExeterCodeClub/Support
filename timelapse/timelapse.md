@@ -2,10 +2,11 @@
 ### Connor Pettitt - 2018-01-11
 **Abstract**: This document aims to outline the basic tasks to follow in order to complete the improvers' timelapse camera project. I believe that we need to provide more structure in order to increase the productivity of each session (and reduce the chaos just a little). We should still aim to allow room for imagination and spontaneity within the design of the project. We will need to figure an effective way to balance the project between everyone.
 
-### TODO
-- create a set of pictures for Team 2 and Team 3 to test with
-- create help sheets with pointers on them for each team
-- 
+### Allocations
+**Task 1, camera setup** All
+**Task 2, program logic** Bradley
+**Task 3, video upload** John
+**Task 4, case design** Tom, Tom, Marcus
 
 ### Links
 - [project inspiration](https://www.raspberrypi.org/forums/viewtopic.php?t=72435)
