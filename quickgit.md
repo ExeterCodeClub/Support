@@ -4,12 +4,14 @@
 
 ## A quick guide to git 
 
-**Super short summary:** Git is a tool to keep track of all changes to any chosen files within a chosen folder. Typing `git` into the command line will give you a list of commonly used commands. You can get more in depth help on a command by typing `git <command> --help` (e.g. `git add --help`)
+**Super short summary:** Git is a tool to keep track of all changes to any chosen files within a chosen folder. Typing `git` into the command line will give you a list of commonly used commands. You can get more in depth help on a command by typing `git <command> --help` (e.g. `git add --help`). This guide is by no means a full introduction to all the features, but they are at the core of what it's all about.
 
-**Basic steps:** init repo (once), create and edit files, add files to index, commit changes.
+**Basic steps at a glance:** init repo (once), create and edit files, add files to index, commit changes.
 
-Github is one of many free online file storage services that seamlessly integrates with git.
-**Github:** See [github help](https://help.github.com/) for help using git and connecting to GitHub. To upload files to a remote (internet) github repository using git: find your ssh public key (which git uses to communicate), insert it into your github account, create a repository (storage folder) on your github account, set the upstream connection on your computer's git software to the web address of that repository.
+
+
+
+**Github:** See [github help](https://help.github.com/) for help using git and connecting to GitHub. Github is one of many free online file storage services that seamlessly integrates with git. To upload files to a remote (internet) GitHub repository using git: find your ssh public key (which git uses to communicate), insert it into your github account, create a repository (storage folder) on your github account, set the upstream connection on your computer's git software to the web address of that repository.
 
 
 Git is a peice of software you need to have installed on your computer, before you can do anything.
@@ -19,6 +21,7 @@ Git is a peice of software you need to have installed on your computer, before y
 **Linux**: Should already be installed on most distributions, otherwise try `sudo apt install git`.
 
 **Mac**: Should be already installed, otherwise check out the [website](https://git-scm.com/).
+
 
 ### Summary
 `git init`                  start up a git folder where you are
@@ -54,3 +57,5 @@ If you want to keep your local repository synchronised with a remote repository,
 
 #### Push
 When you have made and committed changes to your local files, you may then want to push, or upload, onto a remote repository for your own benefit, or to share with others. Use the command `git push`. Pushing requires access permissions to the remote repository, and it will not work if you haven't pulled changes from the remote repository. This would mean the administrator of the repository giving your github account access permissions. You will need to link your github account with your computer's git client by following the GitHub help guide.
+
+

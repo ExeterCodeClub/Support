@@ -1,0 +1,305 @@
+<h1>Task 1 Resources</h1>
+
+<p><strong>This document contains the resources you&rsquo;ll need to get started with setting up the picamera.</strong></p>
+
+<p><strong>Aim:</strong> Your goal is to make sure that the pi can be used to take good pictures. There are a number of settings that can be applied to make the camera work in different ways. Once you have got the camera working, you can experiment with your own ideas and play with the camera.</p>
+
+<p><strong>Links:</strong> This <a href="https://www.raspberrypi.org/documentation/usage/camera/python/README.md">website</a> shows you how to set up and use the picamera</p>
+
+<p><strong>Note:</strong> When asked to type in a command, it means that the command should be typed into a terminal, which can be brought up by pressing <code>ctrl shift t</code> briefly at the same time. For example, &ldquo;Use the command <code>ls</code>&rdquo;, means bring up an old or new terminal, type in the command at the <strong>prompt</strong>, then press the return/enter key. In this case you should see the contents of the current folder listed.</p>
+
+<p>Some things you might now be asking:
+ - a <strong>prompt</strong> is a string of characters which tells you where you can type in your next command, it &lsquo;prompts&rsquo; you to type there.
+ - the prompt normally contains a small amount of information for you, and usually looks like <code>pi ~ $</code> which is telling you <code>username currentfolder $</code>. In windows powershell it is <code>C:/ &gt;</code>. When you type in a comand e.g <code>ls</code>, you should see <code>pi ~ $ ls</code>. No need to type the prompt in yourself!
+ - If there are lots of prompts, the bottom-most one is the correct one.
+ - If the screen is really messy with output, try pressing enter a bunch of times at the prompt to make some space. <code>shift up</code> can scroll up.
+ - <code>~</code> means your home folder, which is the same as /home/pi/
+ - You can move to the documents folder from your home folder by typing <code>cd documents</code>, notice the prompt changes, you can move back up one step by typing <code>cd ..</code>. Moving around is a case of using <code>cd foldername</code>, and then using <code>ls</code> to see what is inside your new folder. If you get lost, type <code>cd</code> to return home.
+ - There are faster ways to move around, but this is the quickest to learn.</p>
+
+<h3>Step 1</h3>
+
+<p>First you&rsquo;ll need to get the raspberry pi detecting the picam.</p>
+
+<p>Type in the following command,</p>
+
+<p><code>bash
+sudo raspi-config
+</code></p>
+
+<p>If it asks for a password, it is <code>raspberry</code> by default.</p>
+
+<p>Dig around for the option to turn on the raspberry pi camera, and activate it, you can use the arrow keys and return key.</p>
+
+<p>Once you&rsquo;ve done this, quit the menu and type the command <code>reboot</code> (make sure you haven&rsquo;t got any unsaved files open).</p>
+
+<h3>Step 2</h3>
+
+<p>Now install the picamera into the camera slot (be gentle!)</p>
+
+<p>Ensure that:
+1. the ribbon cable is installed with the blue tab facing the ethernet port
+2. the ribbon is in the slot labelled &lsquo;camera&rsquo;, not &lsquo;display&rsquo;, between the ethernet port and the hdmi port.
+3. the ribbon is inserted fully into the slot. Notice that you can pull up the little black bit on top, this unlocks the slot.</p>
+
+<p>Try running the command</p>
+
+<p><code>bash
+raspistill -o image.jpg
+</code></p>
+
+<p>Now type <code>ls</code> to see if there is a file called image.jpg, if it exists then the camera is working, otherwise skip the next step.</p>
+
+<p>Find the name of your pi&rsquo;s web browser by looking in the programs menu (top left), and use it to open the image file with the following command (replacing <code>&lt;browsername&gt;</code> with e.g. chromium, or firefox)</p>
+
+<p><code>bash
+&lt;browsername&gt; image.jpg
+</code></p>
+
+<p>If the file <code>image.jpg</code> doesn&rsquo;t exist, then try running the command</p>
+
+<p><code>bash
+vcgencmd get_camera
+</code></p>
+
+<p>Find where it says supported=x and detected=y. x and y will be either 1 or 0, we want them both to be 1. Make sure you check how the ribbon cable is inserted, looking at the checklist above.</p>
+
+<p>After you have fiddled with it a bit, try running that command again to check the status.</p>
+
+<h3>Step 3</h3>
+
+<p>You should now be able to take pictures with the camera by hand. If you would like to sit in the library for the next three weeks typing <code>raspistill -o image1.jpg...</code> every ten seconds, then the project is complete!</p>
+
+<p>Otherwise, you will need to create a script that can be controlled by the pi itself automatically.</p>
+
+<p>Open up a python IDE (any python testing environment) such as Thonny, or IDLE, and find the text editor.</p>
+
+<p>Type the following into the editor (this is not a terminal, just enter the text) then save it to somewhere easy to find, like <code>Documents</code> or <code>Desktop</code>. Call your file findsettings.py</p>
+
+<p><code>python
+import picamera
+camera = picamera.PiCamera()
+camera.capture('pythonimage.jpg')
+camera.close()
+</code></p>
+
+<p>The first line imports the module which allows you to easily control the picamera.</p>
+
+<p>The second line creates a camera &lsquo;instance&rsquo; which is a virtual representation of the real picamera on the pi, so if you run one of the allowed commands on this instance, the actual camera should behave accordingly.</p>
+
+<p>The third line is a command that tells the camera to take a picture (much like we were doing by hand!).</p>
+
+<p>The fourth line ensures that the virtual camera is deleted, and frees up the link to the picamera.</p>
+
+<p>Run the script by finding the run button somewhere in the IDE and pressing it. Usually <code>ctrl s</code> to save, then <code>F5</code> works as well.</p>
+
+<p>If it runs without errors, check that there is a file called pythonimage.jpg in your chosen folder (e.g. <code>Documents</code> or <code>Desktop</code>).</p>
+
+<h3>Step 4</h3>
+
+<p>Change the script to look like this (you&rsquo;ll see why in a minute)
+```python
+import picamera
+camera = picamera.PiCamera()
+camera.capture(&lsquo;original.jpg&rsquo;)</p>
+
+<h1>settings go below here</h1>
+
+<h1>settings go above here</h1>
+
+<p>camera.capture(&lsquo;altered.jpg&rsquo;)
+```</p>
+
+<p>Lines beginning with <code># ...</code> are comments, they do nothing but tell the person  who is reading the script something they should know, it can be a little note, a warning, a smiley face.</p>
+
+<p>The following is a list of camera settings which will alter the way that the images look</p>
+
+<p>```python</p>
+
+<h1>change the quality of the camera image</h1>
+
+<p>camera.resolution = (1280, 720)</p>
+
+<h1>flip the image horizontally or vertically</h1>
+
+<p>camera.hflip = False
+camera.vflip = False
+camera.rotation = 0</p>
+
+<h1>cut the edges of the image off</h1>
+
+<p>camera.crop = (0.0, 0.0, 1.0, 1.0)</p>
+
+<h1>change how sharp lines are in the image</h1>
+
+<p>camera.sharpness = 0</p>
+
+<h1>change the difference between the darkest and the lightest pixels (low contrast means light and dark colours become kind of grey instead, high contrast means that dark things look really black, and light things look really white)</h1>
+
+<p>camera.contrast = 0</p>
+
+<h1>change how bright the image looks</h1>
+
+<p>camera.brightness = 50 #take a guess what this does
+camera.saturation = 0 #adds more colour
+camera.ISO = 0 #changes the sensitivity of the camera, high iso is good for low light
+```</p>
+
+<p>Try inserting those settings into your script and seeing how they alter the original image when you change the values. Some values might be limited to a certain range like 0-1, or 0-100 (no need to copy the comments out). If you think a particular setting might as well be left alone, &lsquo;comment it out&rsquo; by adding a <code>#</code> to the start of the line.</p>
+
+<p>Run the script to check that there are no errors, then see the output files.</p>
+
+<h3>Step 5</h3>
+
+<p>Once you&rsquo;ve put the settings into your script, you can try to automate the process of finding your perfect image.</p>
+
+<p>This step will require a for loop, and for loops look like</p>
+
+<p><code>python
+ilist=[1,2,3,4]
+for i in ilist:
+    print(f'loop {i}')
+    print(i)
+    print()
+</code></p>
+
+<p>In python you can &lsquo;loop over&rsquo; lists, which look like <code>[1,2,3,4,5]</code> or <code>['asfda','ashrg','abcd']</code> or <code>[1,2,'three','four']</code>, you can have numbers and strings in a list, and they can be as long as you like.</p>
+
+<p>A for loop runs a block of code once for each item in the list. The block of code must be indented like in the example.</p>
+
+<p>In the snippet above, <code>i</code> and <code>ilist</code> are variables, which you choose the names of. The second variable needs to be a list, whether one that has already been created or a list expression like this <code>for i in [1,2,3,4]:</code>.</p>
+
+<p>The first variable (<code>i</code>) is newly created at the start of the loop, and gets its value set to each successive item in the list (<code>ilist</code>) with every loop, starting at the first item.</p>
+
+<p>One of the print statements has the line <code>f'loop {i}'</code> inside it, this is python for &ldquo;insert variable <code>i</code> into this string&rdquo;. Note that the string must start with an f, otherwise it will literally print <code>'loop {i}'</code> instead of <code>'loop 2'</code> (if <code>i=2</code>).</p>
+
+<p>Have a guess at what will happen when if you run the above code. Try opening another python file in your IDE, putting it into the text editor, then running it.</p>
+
+<p>Modify findsettings.py to contain a for loop which will change a particular setting, while leaving the rest alone, use the following as an example</p>
+
+<p>```python
+import picamera
+from numpy import arange        #&lt;&lt;&lt; this is new
+camera = picamera.PiCamera()
+camera.capture(&lsquo;original.jpg&rsquo;)</p>
+
+<h1>settings go below here</h1>
+
+<p>camera.resolution = (1280, 720)
+camera.hflip = False
+camera.vflip = False
+camera.rotation = 0
+camera.crop = (0.0, 0.0, 1.0, 1.0)
+camera.sharpness = 0
+camera.contrast = 0
+camera.brightness = 50 #take a guess what this does
+camera.saturation = 0 #adds more colour
+camera.ISO = 0 #changes the sensitivity of the camera, high iso is good for low light</p>
+
+<h1>settings go above here</h1>
+
+<p>min=0
+max=100
+step=10
+setting=&lsquo;brightness&rsquo;</p>
+
+<p>for settingValue in arange(min,max,step):</p>
+
+<pre><code>camera.brightness=settingValue
+
+camera.capture(f'altered{setting}{settingValue}.jpg')
+print(f'picture taken with {setting} setting value: {settingValue}')
+sleep(0.5)
+</code></pre>
+
+<p>```</p>
+
+<p>The arange function creates a list with its first number as <code>min</code>, and with each number increasing in steps of <code>step</code> until it reaches the final number <code>max</code>.</p>
+
+<p>Can you see what will happen with this loop?</p>
+
+<p>Look through the output images to see which one looks the best, note down which setting value it was on, then replace the setting in the loop with another from the list that you want to investigate.
+e.g. move <code>camera.brightness=70</code> up to the settings list, put <code>camera.ISO=settingValue</code> into the loop, change the variable <code>setting</code> to iso with <code>setting='iso'</code>, and change the variables <code>min</code>,<code>max</code>,<code>step</code> to the appropriate values (try <code>0</code>,<code>800</code>,<code>100</code>).</p>
+
+<p>Settings and their ranges (min,max) you might want to play with include
+ - brightness (0,100)
+ - rotation   (0,360)
+ - sharpness  (0,find out!) &lt; probably (0,100)
+ - contrast   (0,find out!)
+ - saturation (0,find out!)
+ - ISO        (0,800)</p>
+
+<p>once you have found the settings you would like to use, save then continue to the next step.</p>
+
+<h3>Step 6</h3>
+
+<p>Now you have the absolute basic functionality for the script, it is time to start adding the ability for another script to control yours. this is what Task2 with the program logic tries to take advantage of.</p>
+
+<p>Save your file with a new name camerapic.py, such that it has all the same contents, you will be modifying it to interface (or interact with) another python script.</p>
+
+<p>This step requires the use of a function, and functions take the form</p>
+
+<p>```python
+def funcname(argument1,argument2):
+    print(&lsquo;I will now add the two arguments together&rsquo;)</p>
+
+<pre><code>added = argument1 + argument2
+print(f'This is the result: {added}')
+
+return
+</code></pre>
+
+<p>print(&lsquo;calling functions&rsquo;)
+funcname(1,2)
+funcname(&lsquo;hello &rsquo;,&lsquo;world&rsquo;)
+```</p>
+
+<p>A function is a block of code much like any other code you&rsquo;ve written so far, except that you need to define it before you can use it. They are helpful because they can be reused as many times as needed without having to rewrite the entire block out again, with different inputs (or &lsquo;arguments&rsquo;, but not the kind you have with your parents).</p>
+
+<p>First is the function definition, which starts with the line <code>def funcname(argument1,argument2):</code> and ends with <code>return</code>, all functions need to start with <code>def &lt;insert function name&gt;(&lt;insert arguments&gt;):</code>, but they don&rsquo;t have to end with <code>return</code>, find out what it does when you get the chance. All functions need to have an indented code block of at least one line inside them (like <code>for</code> loops).</p>
+
+<p>Try copying the above code into a new file, then run that file.</p>
+
+<p>Notice that &lsquo;calling functions&rsquo; is the first output. This is because a function definition doesn&rsquo;t do anything on its own, the function must be &lsquo;called&rsquo;, which is what the script does in the lines below <code>print('calling functions')</code>. By now you are familiar with the <code>print</code> function, try typing just <code>print</code> into a python terminal, it tells you that it is a function definition! However <code>print(argument)</code> is an example of a function &lsquo;call&rsquo;, and calls do something with the argument they&rsquo;re given. So the python notation to call a function is to add <code>()</code> to the end of the function definition, with the required arguments inside the brackets.</p>
+
+<p>Modify camerapic.py to look like the following (while using the settings you&rsquo;ve found to work best)</p>
+
+<p>```python
+import picamera
+camera = picamera.PiCamera()</p>
+
+<p>def init(cam):
+    cam.resolution = (1280, 720)
+    cam.hflip = False
+    cam.vflip = False
+    cam.rotation = 0
+    cam.crop = (0.0, 0.0, 1.0, 1.0)
+    cam.sharpness = 0
+    cam.contrast = 0
+    cam.brightness = 50 #take a guess what this does
+    cam.saturation = 0 #adds more colour
+    cam.ISO = 0 #changes the sensitivity of the camera, high iso is good for low light
+    cam.brightness=50</p>
+
+<pre><code>print('Camera initialised.')
+</code></pre>
+
+<p>def takePic(cam,num):
+    cam.capture(f'image{num}.jpg')</p>
+
+<p>if <strong>name</strong> == &lsquo;main&rsquo;:
+    init(camera)
+    takePic(camera, 1)
+```</p>
+
+<p>As you can see, this script has two functions inside it.</p>
+
+<p>The first function takes one argument <code>cam</code>, and changes its settings. It is expecting <code>cam</code> to be a virtual camera object, so if you called <code>init('cows')</code> for example, it would crash.</p>
+
+<p>The second function accepts two arguments <code>cam</code> and <code>num</code>, then uses <code>cam</code> to take a picture and output a file with <code>num</code> in the name. As you might expect, <code>cam</code> is treated as a camera object, while <code>num</code> can be either a string or a number.j</p>
+
+<p>Now run the script. It should output a file with the name image1.jpg.</p>
+
+<p>Notice the line that says <code>if __name__=='main':</code>, that is python for &ldquo;if this script is being run directly by hand, do the stuff in the indented block below. Otherwise, don&rsquo;t do anything.&rdquo;</p>
+
+<p>The script is now ready, and this part of the project is finished.</p>
