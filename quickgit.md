@@ -26,7 +26,7 @@ Git is a peice of software you need to have installed on your computer, before y
 ### Summary
 `git init`                  start up a git folder where you are
 
-**If nothing else, remember these two**
+**If nothing else, remember the following two**
 
 `git add <file>`            track changes made to a file in the git folder
 
