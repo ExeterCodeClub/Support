@@ -148,3 +148,15 @@ Save the file as imagerename.sh, then make the file executable.
 
 
 ## Step 3
+
+
+
+
+
+
+
+
+
+
+
+
