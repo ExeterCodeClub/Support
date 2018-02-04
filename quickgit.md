@@ -27,11 +27,16 @@ Git is a peice of software you need to have installed on your computer, before y
 `git init`                  start up a git folder where you are
 
 **If nothing else, remember these two**
+
 `git add <file>`            track changes made to a file in the git folder
+
 `git commit -m "<message>"` store changes made to a file in git (separate from 'saving' a file in the usual sense)
 
+
 `git clone <url>`           download a remote (online) project
+
 `git pull`                  update your local repository with changes stored on the remote repository, best to run before you makelocal edits
+
 `git push`                  update a remote repository with changes you've made on your local repository
 
 
