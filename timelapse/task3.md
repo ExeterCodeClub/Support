@@ -7,7 +7,7 @@
 
 **Note:** When asked to type in a command, it means that the command should be typed into a terminal, which can be brought up by pressing `ctrl shift t` briefly at the same time. For example, "Use the command `ls`", means bring up an old or new terminal, type in the command at the **prompt**, then press the return/enter key. In this case you should see the contents of the current directory listed.
 
-**Note:** Where you see something like <your name> with the angled brackets around it, replace that with what it's asking you to, and not explicitly "<your name>". So you might type "Lucy" in its place, for example.
+**Note:** Where you see something like \<your name\> with the angled brackets around it, replace that with what it's asking you to, and not explicitly "\<your name\>". So you might type "Lucy" in its place, for example.
 
 
 Some things you might now be asking:
@@ -52,10 +52,10 @@ Run the commands
 ```bash
 mkdir testimages
 
-cp <location of task3-img>/* testimages/
+cp \<location of task3-img\>/* testimages/
 ```
 
-where <location of task3-img>  is whereever the find command told you it was (`/home/pi/blah...`) Here you are creating a new directory called testimages, then copying the contents of the task3-img directory into it. Type `ls testimages` to check that the contents were copied properly.
+where \<location of task3-img\>  is whereever the find command told you it was (`/home/pi/blah...`) Here you are creating a new directory called testimages, then copying the contents of the task3-img directory into it. Type `ls testimages` to check that the contents were copied properly.
 
 Open another terminal and then open an editor by typing `leafpad`, or `nano`, then put the following into the editor
 
@@ -88,7 +88,7 @@ To 'make executable' means to tell the computer that we want to be able to run t
 
 Try running the script by typing `./resetimages.sh` into your console.
 
-Compare the script to what was output, does that makes sense? You can see the script without opening it up by typing `cat <script name>`.
+Compare the script to what was output, does that makes sense? You can see the script without opening it up by typing `cat \<script name\>`.
 
 
 Now you need to add some lines which will copy the images directory to your workdirectory.
@@ -97,7 +97,7 @@ Now you need to add some lines which will copy the images directory to your work
 #!/bin/bash
 
 workdirectory=testimages
-images=<location of images file>
+images=\<location of images file\>
 
 echo workdirectory $workdirectory
 echo images $images
@@ -137,7 +137,7 @@ Now it is time to rename all of the images, because we cannot expect them to be 
 First you should try renaming one of the files to see how it works. Type the command `ls` to see the best file to rename (the best file would be the first in the list), then type the command 
 
 ```bash
-mv <best filename> image-000001.jpg
+mv \<best filename\> image-000001.jpg
 ```
 
 Shock! It's the same as the move command, except you're moving it to the same place but with a different name.
@@ -202,7 +202,7 @@ Try typing `printf "%03.2f" 11.5` into the terminal, you can change the numbers 
 
 Next we are renaming the current file the for loop is focusing on to the name "image-$filenumber.jpg", the tenth file will be called "image-000010.jpg", and so on...
 
-Finally we need to increase the number `$i` by 1 with each loop, since they need to be numbered in order. To do maths like adding numbers, Bash needs equations to be stored inside `$[ <equation> ]` to know what to do with them.
+Finally we need to increase the number `$i` by 1 with each loop, since they need to be numbered in order. To do maths like adding numbers, Bash needs equations to be stored inside `$[ \<equation\> ]` to know what to do with them.
 
 
 Save the script as imagerename.sh, then make the script executable. 
