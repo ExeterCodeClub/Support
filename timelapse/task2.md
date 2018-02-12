@@ -22,14 +22,11 @@ for filename in camera.capture_continuous('img{counter:03d}.jpg'):
 ```
 
 ### Summary of aims
-- learn while loops
-- control script to set time between loops
-- name output files properly
-- save them in the right place
-- use motion detection to take pictures
-- alter raspberry pi settings to start script on boot
-- call another script to take pictures 
-
+- create a while loop which stops at a certain time
+- save files in a folder
+- name files with the time they were taken
+- possibly add some new features like motion detection
+- make the pi start the script on boot
 
 ### Step 1
 For this project, a while loop will be needed to keep the code running for as long as we want it to. The idea is to create code that takes one picture, then loop/repeat the code as many times as you need. 
