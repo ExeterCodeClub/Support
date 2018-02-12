@@ -88,7 +88,9 @@ To 'make executable' means to tell the computer that we want to be able to run t
 
 Try running the script by typing `./resetimages.sh` into your console.
 
-Compare the script to what was output, does that makes sense? You can see the script without opening it up by typing `cat \<script name\>`.
+Compare the script to what was output, does that makes sense? You can see the script without opening it up by typing `cat <script name>`.
+
+Guess what the command `echo` does. Try running that command in a console with some random words after it. How about `a=banana`, then `echo a`, and finally `echo $a`.
 
 
 Now you need to add some lines which will copy the images directory to your workdirectory.
@@ -117,7 +119,6 @@ The command `rm` removes or deletes files for you. See that it says `rm $workdir
 
 The command `cp` copies directories and files to other locations. It can overwrite files, so be careful where you copy to. In this case, we are copying the 'images' directory to a work directory called 'testimages'.
 
-Guess what the command `echo` does. Try running that command in a console with some random words after it. How about `a=banana`, then `echo a`, and finally `echo $a`.
 
 
 We can use this script to undo any mistakes made with the images by replacing them all. If you're using nano, you save by pressing `crtl x`, then pressing `y` and `enter` when it prompts you to.
@@ -152,8 +153,9 @@ To automate this, we need a script
 #!/bin/bash
 
 workdirectory=testimages
+cd $workdirectory
 
-imagelist=$( ls $workdirectory )
+imagelist=$( ls )
 sortedlist=$( sort $imagelist )
 
 
@@ -162,16 +164,18 @@ for image in sortedlist; do
 
     imagenumber=$(printf "%06.0f" $i)
 
-    mv $workdirectory/$image $workdirectory/image-$imagenumber.jpg
+    mv $image image-$imagenumber.jpg
 
     i=$[ i+1 ]
 
 done
+
+cd ..
 ```
 
 Let's break this down. 
 
-First we assign the variable `workdirectory` the value `testimages` again, since that's where the images we will rename are stored.
+First we assign the variable `workdirectory` the value `testimages` again, since that's where the images we will rename are stored. Then we move into `testimages` ready for the next bit.
 
 The line that says `list=$( ls $workdirectory )` is running the command `ls testimages` in the terminal to get a list of the image filenames, which looks like 
 
@@ -202,7 +206,9 @@ Try typing `printf "%03.2f" 11.5` into the terminal, you can change the numbers 
 
 Next we are renaming the current file the for loop is focusing on to the name "image-$filenumber.jpg", the tenth file will be called "image-000010.jpg", and so on...
 
-Finally we need to increase the number `$i` by 1 with each loop, since they need to be numbered in order. To do maths like adding numbers, Bash needs equations to be stored inside `$[ \<equation\> ]` to know what to do with them.
+After that we need to increase the number `$i` by 1 with each loop, since they need to be numbered in order. To do maths like adding numbers, Bash needs equations to be stored inside `$[ <equation> ]` to know what to do with them.
+
+Finally we move back out of the testimages directory to where we started.
 
 
 Save the script as imagerename.sh, then make the script executable. 
