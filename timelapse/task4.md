@@ -1,5 +1,5 @@
 # Task 4 Resources
-**This document contains the resources you'll need to get started with building the case**
+**This document contains a few pointers for getting started with the pi case**
 
 **Aim:** Your goal is to use your creative talents to build a case for the raspberry pi and camera. 
 
@@ -15,6 +15,6 @@
 - wall mount
 - bright design
 
-## More steps to come
+We need to figure out where we want to go with this part of the project! 
 
-We need to figure out where we want to go with this part of the project!
+You have a choice between the laser cutter, a 3d printer, and doing by hand.
