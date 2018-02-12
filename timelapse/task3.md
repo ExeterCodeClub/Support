@@ -52,7 +52,7 @@ Run the commands
 ```bash
 mkdir testimages
 
-cp \<location of task3-img\>/* testimages/
+cp <location of task3-img>/* testimages/
 ```
 
 where \<location of task3-img\>  is whereever the find command told you it was (`/home/pi/blah...`) Here you are creating a new directory called testimages, then copying the contents of the task3-img directory into it. Type `ls testimages` to check that the contents were copied properly.
@@ -97,7 +97,7 @@ Now you need to add some lines which will copy the images directory to your work
 #!/bin/bash
 
 workdirectory=testimages
-images=\<location of images file\>
+images=<location of images file>
 
 echo workdirectory $workdirectory
 echo images $images
@@ -137,7 +137,7 @@ Now it is time to rename all of the images, because we cannot expect them to be 
 First you should try renaming one of the files to see how it works. Type the command `ls` to see the best file to rename (the best file would be the first in the list), then type the command 
 
 ```bash
-mv \<best filename\> image-000001.jpg
+mv <best filename> image-000001.jpg
 ```
 
 Shock! It's the same as the move command, except you're moving it to the same place but with a different name.
