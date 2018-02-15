@@ -107,13 +107,6 @@ Maybe you could add more code which allows a user to type in how many days they 
 
 
 ### Step 2
-test that we can save files in the right place with good names
-sensible naming scheme
-sensible save folder
-discover location, `pwd`
-output dummy files, `name=f'blah{i}', dummy=open(name,'w'): dummy.write('hello'), dummy.close()`
-
-
 
 It's a good idea to test that you will be able to write files properly. They need to be in the right place with names that are easy to parse (be interpreted) by the code in task3. Python, along with any other language, allows you to write files to the system using file input/output functions.
 
@@ -197,7 +190,7 @@ while currenttime < endtime
 Have a think how you might use the other modules to give some interesting effects.
 
 ### Step 5
-It would be a good idea to make the code a little more fault tolerant by getting it to start on boot.
+It would be a good idea to get the code to start on boot to allow it to operate in headless mode (no monitor/mouse/keyboard).
 
 To prepare your script, make the following line the very first line of the script
 
